@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prevention</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" 
+                            class="navbar-toggle" 
+                            data-toggle="collapse" 
+                            data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                    </button>
+                    <a class="navbar-brand no-margins" href="index.html">
+                        Home
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="health_intake.html">
+                        <span class="glyphicon glyphicon-th-large">
+                        </span>
+                        Health Intake
+                    </a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dataset
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="methods.html">Methods</a></li>
+                            <li><a href="framingham.html">Framingham Study</a></li>
+                        </ul>
+                        </li>
+                    <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Heart Disease
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="symptoms.html">Symptoms</a></li>
+                                <li><a href="riskfactors.html">Risk Factors</a></li>
+                                <li><a href="prevention.html">Prevention</a></li>
+                            </ul>
+                            </li>
+                </ul>
+                </div>
+            </div>
+            </nav>
+    <body>
+        <div class="container">
+            <h1 class="plot-info">Prevention</h1>
+            <!-- <a target="_blank" href="Web-Design-Challenge\Resources\fig2.png">
+                <img src="Web-Design-Challenge\Resources\fig2.png" alt="Latitude and Humidity Plot" class="plot-img">
+            </a> -->
+            <p class="plot-info">
+                Our machine learning algorithm used the data collected from the Framingham Heart Study. The Framingham 
+                Heart Study (link to wikipedia) is a long term, on-going research study that led to much of our current
+                knowledge the impacts of lifestyle on cardiovascular health.  
+                <br>
+                <br>
+                The dataset utlized publically availible data from kaggle (link) and was processed omitting any null values
+                or redundant elements (training factors?). Processing the data in this manner led to ~15% data loss leaving us 
+                with a dataset of n=3658. This was deemed sufficient for our non-production purposes. 
+                <br>
+                <br>
+                To ensure reliable training of our machine learning algorithm, we upsampled our "CHD positive" samples, resulting 
+                in a dataset of n=6202. 
+            </p>
+        </div>
+    </body>
+
+</html>
