@@ -1,5 +1,6 @@
 import flask 
 from flask import request, render_template, jsonify
+# from model_api import 
 #from predictor_api import make_predictions
 
 app = flask.Flask(__name__)
@@ -19,19 +20,33 @@ def main():
 @app.route("/request", methods= ['POST'])
 def result():
     if request.method == 'POST':
-        age = request.form.get('age')
+        age = int(request.form.get('age'))
         sex = request.form.get('male') 
-        sysBP = request.form.get('sysBP')
-        chol = request.form.get('totChol')
-        glucose = request.form.get('glucose')
-        bmi = request.form.get('BMI')
-        restingHR = request.form.get('heartRate')
-        cigs = request.form.get('cigsPerDay')
-        education = request.form.get('education')
-        bpMed = request.form.get('BPMeds')
-        stroke = request.form.get('prevalentStroke')
+        if sex == "Male":
+            sex = 1
+        else: 
+            sex = 0
+        sysBP = float(request.form.get('sysBP'))
+        chol = float(request.form.get('totChol'))
+        glucose = float(request.form.get('glucose'))
+        bmi = float(request.form.get('BMI'))
+        restingHR = float(request.form.get('heartRate'))
+        cigs = float(request.form.get('cigsPerDay'))
+        education = float(request.form.get('education'))
+        bpMed = float(request.form.get('BPMeds'))
+        stroke = int(request.form.get('prevalentStroke'))
 
-        form_data = age, sex, sysBP, chol, glucose, bmi, restingHR, cigs, education, bpMed, stroke
+        form_data = []
+        form_data.append()
+        age, sex, sysBP, chol, glucose, bmi, restingHR, cigs, education, bpMed, stroke
+
+        predict_outcome = make_predictions(form_data)
+        # create function under model_api
+        #function predict_output:
+                # take the data from form_data as single argument
+                # spits out predictive results 1 or 0 (10yearCHD)
+                # return prediction (0 or 1)
+                # invoke predict_outcome
 
     #return results(data=form_data)
     #process data
