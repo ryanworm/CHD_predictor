@@ -1,60 +1,46 @@
-from numpy import genfromtxt
-from time import time
-from datetime import datetime
-from sqlalchemy import Column, Integer, Float, Date
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+import flask 
+from flask import request, render_template, jsonify
+#from predictor_api import make_predictions
 
-def Load_Data(file_name):
-    data = genfromtxt(file_name, delimiter=',', skip_header=1, converters={0: lambda s: str(s)})
-    return data.tolist()
+app = flask.Flask(__name__)
 
-Base = declarative_base()
+# @app.route("/page_name", methods = ["GET","POST"])
+# def do_something():
+#     flask.render_template('page_name.html',var_1 = v1, var_2 = v2
 
-class Price_History(Base):
-    #Tell SQLAlchemy what the table name is and if there's any table-specific arguments it should know about
-    __tablename__ = 'Price_History'
-    __table_args__ = {'sqlite_autoincrement': True}
-    #tell SQLAlchemy the name of column and its attributes:
-    id = Column(Integer, primary_key=True, nullable=False) 
-    date = Column(Date)
-    opn = Column(Float)
-    hi = Column(Float)
-    lo = Column(Float)
-    close = Column(Float)
-    vol = Column(Float)
+# return flask.render_template('predictor.html',
+#                               chat_in=x_input,
+#                               prediction=predictions)
 
-if __name__ == "__main__":
-    t = time()
+@app.route("/")
+def main():
+    return render_template('health_intake.html')
 
-    #Create the database
-    engine = create_engine('sqlite:///csv_test.db')
-    Base.metadata.create_all(engine)
+@app.route("/request", methods= ['POST'])
+def result():
+    if request.method == 'POST':
+        age = request.form.get('age')
+        sex = request.form.get('male') 
+        sysBP = request.form.get('sysBP')
+        chol = request.form.get('totChol')
+        glucose = request.form.get('glucose')
+        bmi = request.form.get('BMI')
+        restingHR = request.form.get('heartRate')
+        cigs = request.form.get('cigsPerDay')
+        education = request.form.get('education')
+        bpMed = request.form.get('BPMeds')
+        stroke = request.form.get('prevalentStroke')
 
-    #Create the session
-    session = sessionmaker()
-    session.configure(bind=engine)
-    s = session()
+        form_data = age, sex, sysBP, chol, glucose, bmi, restingHR, cigs, education, bpMed, stroke
 
-    try:
-        file_name = "t.csv" #sample CSV file used:  http://www.google.com/finance/historical?q=NYSE%3AT&ei=W4ikVam8LYWjmAGjhoHACw&output=csv
-        data = Load_Data(file_name) 
+    #return results(data=form_data)
+    #process data
 
-        for i in data:
-            record = Price_History(**{
-                'date' : datetime.strptime(i[0], '%d-%b-%y').date(),
-                'opn' : i[1],
-                'hi' : i[2],
-                'lo' : i[3],
-                'close' : i[4],
-                'vol' : i[5]
-            })
-            s.add(record) #Add all the records
+    #model.load('modle.h5')
 
-        s.commit() #Attempt to commit all the records
-    except:
-        s.rollback() #Rollback the changes on error
-    finally:
-        s.close() #Close the connection
-    print "Time elapsed: " + str(time() - t) + " s." #0.091s
+    #predictions= model.predict(data)
+
+    return jsonify(form_data) #render_template('results.html', results = predictions)
+
+if __name__=="__main__":
+    app.run(debug=True)

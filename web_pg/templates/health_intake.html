@@ -64,10 +64,10 @@
     <body>
         <div class="container">
             <h1>Health Intake</h1>
-            <form>
+            <form action="/request" method="post">
                 <div class="form-group">
                   <label for="exampleFormControlSelect1">Age</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
+                  <select class="form-control" name="age" id="FormControlSelect1">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -172,14 +172,14 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Sex</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" name="male" id="FormControlSelect2">
                       <option>Male</option>
                       <option>Female</option>
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Systolic Blood Pressure</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" name="sysBP" id="FormControlSelect3">
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -189,7 +189,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Cholesterol Levels</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" name="totChol" id="FormControlSelect4">
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -199,7 +199,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Blood Glucose</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" name="glucose" id="FormControlSelect5">
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -209,7 +209,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Body Mass Index</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" name="BMI" id="FormControlSelect6">
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -219,7 +219,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Resting Heart Rate</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" name= "heartRate" id="FormControl7">
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -229,7 +229,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Cigarettes per day</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" name="cigsPerDay" id="FormControl8">
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -239,7 +239,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Years of post-secondary education</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" name="education" id="FormControl9">
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -249,7 +249,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Do you take blood pressure medication</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" name="BPMeds" id="FormControl10">
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -259,7 +259,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Have you previously suffered a stroke?</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select class="form-control" name="prevalentStroke" id="FormControl11">
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
