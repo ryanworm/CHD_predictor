@@ -1,53 +1,45 @@
-a.navbar-brand no-margins{color:red;
-}
-
 body {
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     padding: 10px;
     margin: 10px;
-    color: #030455;
+    color: #000000;
 }
-body{
-    
-}
-.container-fluid{
-    background-color: #030455;
+div.container-fluid{
+    background-color: #000000;
+    height: 100px;
 }
 
-h3 {
-    color: #030455;
+#logo{
+    position: absolute;
+    top:35px;
+    left:10px;
+    width:120px;
+    height:auto;    
 }
-
-img {
-    max-width: 100%;
-    height: auto;
+div.row{
+    font-family: 'Dosis', sans-serif;
+    font-weight:500;
 }
-
-p img {
-    float: left;
-    padding-bottom: 12px;
+#myNavbar {
+    padding-top:50px;
+    font-family: 'Dosis', sans-serif;
+    font-weight:300;
+    font-size:22px;
+}
+#home_title {
+    padding-top:60px;
+    padding-left:130px;
+    font-size:32px;
+    font-family: 'Dosis', sans-serif;
+    font-weight:500;
+    color:#fff;
 }
 
 p {
-    margin: 20px;
-    padding: 25px;
-    background-color: #caf0f8;
+    font-family: 'Dosis', sans-serif;
+    font-weight:500;
+    font-size:18px;
 }
-
-div .btn-group-vertical {
-    margin-left: 60px;
-    }
-
-table{
-    background-color: #E5D9F2;
-    border:1px solid black;
-    color:#030455;
-    }
-
-div.table-responsive{
-    color:red;
-}
-div.table-responsive tr:hover{background-color: #DEBA6F;}
 
 .plot-img {
     display: block;
