@@ -86,6 +86,26 @@
                 To ensure reliable training of our machine learning algorithm, we upsampled our "CHD positive" samples, resulting 
                 in a dataset of n=6202. 
             </p>
+            <!-- <h1> {{results_output}}</h1>
+            <h1> {{Age}}</h1> -->
+            <table>
+                <thead>
+                  <tr class="table100-head">
+                    <th class="column1">String Input</th>
+                    <th colspan="2" class="column1">Toxicity Levels (Predictions)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td rowspan="6" class="column1"></td>
+                      <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
+                      <td class="column1">{{Age}}</td>
+                      <td class="column2">{{ results_output}}</td>
+                      <td class="column2">{{ non_ml_output}}</td>
+                    </tr>                  
+                </tbody>
+              </table>
+              <br>
         </div>
     </body>
 

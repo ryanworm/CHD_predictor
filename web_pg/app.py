@@ -1,7 +1,10 @@
 import flask 
 from flask import request, render_template, jsonify
+import numpy as np
+from predictor_api import predict_outcome
+
 # from model_api import 
-#from predictor_api import make_predictions
+# from predictor_api import predict_outcome
 
 app = flask.Flask(__name__)
 
@@ -35,9 +38,9 @@ def result():
         education = request.form.get('education')
         if education == "Some High School":
             education = 1
-        elif education == "High School Diploma" 
+        elif education == "High School Diploma": 
             education = 2
-        elif education == "College Diploma" 
+        elif education == "College Diploma":
             education = 3
         else:
             education = 4
@@ -47,30 +50,39 @@ def result():
         else: 
             bpMed = 0
         stroke = request.form.get('prevalentStroke')
+        # stroke_raw = stroke
         if stroke == "Yes":
             stroke = 1
         else: 
             stroke = 0
+
+               
         form_data = []
-        form_data.append()
-        age, sex, sysBP, chol, glucose, bmi, restingHR, cigs, education, bpMed, stroke
+        form_data.append((age, sex, sysBP, chol, glucose, bmi, restingHR, cigs, education, bpMed, stroke))
+        form_data = form_data[0]        
+        
+        # print(form_data)
 
-        predict_outcome = make_predictions(form_data)
-        # create function under model_api
-        #function predict_output:
-                # take the data from form_data as single argument
-                # spits out predictive results 1 or 0 (10yearCHD)
-                # return prediction (0 or 1)
-                # invoke predict_outcome
+  # invoke predict_outcome
+        # CHD_risk = predict_outcome(form_data)
+        #if CHD_risk == 1:
+            #print("you are at high risk of heart disease")
+        #else:
+            #print("you are not at high risk of heart disease")
+    
+    # print(np.array(form_data))
+    result = predict_outcome(np.array(form_data).reshape(-1,11))
+    # print(result)
 
-    #return results(data=form_data)
-    #process data
+    if (sex == "Male" and age >50):
+        non_ml_result = "Unusual"
+    else:
+        non_ml_result  = "No Result"
+        
 
-    #model.load('modle.h5')
-
-    #predictions= model.predict(data)
-
-    return jsonify(form_data) #render_template('results.html', results = predictions)
+    # return jsonify(form_data) 
+    return render_template('results.html', results_output = result, Age =  age, non_ml_output =  non_ml_result  )
+    # return(form_data)
 
 if __name__=="__main__":
     app.run(debug=True)
