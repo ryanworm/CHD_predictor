@@ -1,0 +1,24 @@
+TenYearCHD is those that did or did not develop CHD (Coronary Heart Disease) during the study period
+
+Age: 65+
+
+Sex: 	Male - Increased risk 
+
+Systolic blood pressure:
+	Normal: Under 120
+	At risk: 120-129
+	High blood pressure: 130+
+
+Total Cholesterol (https://medlineplus.gov/cholesterollevelswhatyouneedtoknow.html)
+	Under 20 years (Males and Females): Less then 170mg/dL
+	Over 20 years (Men): 125 - 200mg/dL
+	Over 20 years (Women): 125 - 200mg/dL
+
+
+BMI: 	Below 18.5 = Underweight
+	18.5 - 24.9 = Ideal
+	25.0 - 29.9 = Overweight
+	30.0+ = Obese	
+
+
+

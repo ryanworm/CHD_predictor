@@ -15,10 +15,10 @@ app = flask.Flask(__name__)
 # return flask.render_template('predictor.html',
 #                               chat_in=x_input,
 #                               prediction=predictions)
-
+# C:\Users\Ryan\Desktop\final_project_new\CHD_predictor\web_pg\static\html
 @app.route("/")
 def main():
-    return render_template('health_intake.html')
+    return render_template('index.html')
 
 @app.route("/request", methods= ['POST'])
 def result():
