@@ -32,10 +32,25 @@ def result():
         bmi = float(request.form.get('BMI'))
         restingHR = float(request.form.get('heartRate'))
         cigs = float(request.form.get('cigsPerDay'))
-        education = float(request.form.get('education'))
-        bpMed = float(request.form.get('BPMeds'))
-        stroke = int(request.form.get('prevalentStroke'))
-
+        education = request.form.get('education')
+        if education == "Some High School":
+            education = 1
+        elif education == "High School Diploma" 
+            education = 2
+        elif education == "College Diploma" 
+            education = 3
+        else:
+            education = 4
+        bpMed = request.form.get('BPMeds')
+        if bpMed == "Yes":
+            bpMed = 1
+        else: 
+            bpMed = 0
+        stroke = request.form.get('prevalentStroke')
+        if stroke == "Yes":
+            stroke = 1
+        else: 
+            stroke = 0
         form_data = []
         form_data.append()
         age, sex, sysBP, chol, glucose, bmi, restingHR, cigs, education, bpMed, stroke
