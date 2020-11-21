@@ -8,23 +8,17 @@ from predictor_api import predict_outcome
 
 app = flask.Flask(__name__)
 
-# @app.route("/page_name", methods = ["GET","POST"])
-# def do_something():
-#     flask.render_template('page_name.html',var_1 = v1, var_2 = v2
 
-# return flask.render_template('predictor.html',
-#                               chat_in=x_input,
-#                               prediction=predictions)
-# C:\Users\Ryan\Desktop\final_project_new\CHD_predictor\web_pg\static\html
 @app.route("/")
 def main():
     return render_template('index.html')
 
-@app.route("/request", methods= ['POST'])
+@app.route("/health_intake", methods= ['POST'])
 def result():
     if request.method == 'POST':
         age = int(request.form.get('age'))
         sex = request.form.get('male') 
+        sex_raw = sex
         if sex == "Male":
             sex = 1
         else: 
@@ -36,6 +30,7 @@ def result():
         restingHR = float(request.form.get('heartRate'))
         cigs = float(request.form.get('cigsPerDay'))
         education = request.form.get('education')
+        education_raw = education
         if education == "Some High School":
             education = 1
         elif education == "High School Diploma": 
@@ -45,12 +40,13 @@ def result():
         else:
             education = 4
         bpMed = request.form.get('BPMeds')
+        bpMed_raw = bpMed
         if bpMed == "Yes":
             bpMed = 1
         else: 
             bpMed = 0
         stroke = request.form.get('prevalentStroke')
-        # stroke_raw = stroke
+        stroke_raw = stroke
         if stroke == "Yes":
             stroke = 1
         else: 
@@ -81,7 +77,8 @@ def result():
         
 
     # return jsonify(form_data) 
-    return render_template('results.html', results_output = result, Age =  age, non_ml_output =  non_ml_result  )
+    return render_template('results.html', results_output = result, Age =  age, Sex = sex_raw, SysBP = Systolic_BP, Cholesterol = chol, Glucose = glucose, 
+    BMI = bmi, Resting_HR = restingHR, Cigs = cigs, Education = education_raw, BP_Medication = bpMed_raw, Stroke = stroke_raw, non_ml_output =  non_ml_result  )
     # return(form_data)
 
 if __name__=="__main__":
