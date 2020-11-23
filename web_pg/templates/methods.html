@@ -36,7 +36,7 @@
                 <div class="collapse navbar-collapse navbar-right" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Analysis
+                        <a class="dropdown-toggle" id="button_action" data-toggle="dropdown" href="#">Analysis
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="health_intake.html">Intake Form</a></li>
@@ -44,7 +44,7 @@
                         </ul>
                         </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dataset
+                        <a class="dropdown-toggle" id="button_action" data-toggle="dropdown" href="#">Dataset
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="methods.html">Methods</a></li>
@@ -52,13 +52,13 @@
                         </ul>
                         </li>
                     <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Heart Disease
+                            <a class="dropdown-toggle" id="button_action" data-toggle="dropdown" href="#">Heart Disease
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="symptoms.html">Symptoms</a></li>
                                 <li><a href="riskfactors.html">Risk Factors</a></li>
-                                <li><a href="prevention.html">Prevention</a></li>
+                                <li><a href="prevention.html">Diagnosis</a></li>
                                 <li><a href="treatment.html">Treatment</a></li>
                             </ul>
                             </li>
@@ -71,13 +71,14 @@
                     <div class="col-sm-12 col-md-8" id="bodytext">
             <h1 class="plot-info">Methods</h1>
             <p class="plot-info">
-                The dataset utlized publically availible data from kaggle (link) and was processed omitting any null values
-                or redundant attributes. Processing the data in this manner led to ~15% data loss leaving us 
+                The dataset utlized public data from <a href="https://www.kaggle.com/amanajmera1/framingham-heart-study-dataset">kaggle</a> and was processed to omit null values
+                and redundant attributes. From an origonal data set of n=4240 pre-processing the data in this manner led to 15.21% data loss leaving us 
                 with a dataset of n=3658. This was deemed sufficient for our non-production purposes. 
                 <br>
                 <br>
-                To ensure reliable training of our machine learning algorithm, we upsampled our "CHD positive" samples, resulting 
-                in a dataset of n=6202. 
+                Our dataset only contained 15.18% positive for CHD within 10 years so we upscaled to ensure a balanced sample for training purpopses. 
+                This left us with a sample of n=6202.   
+
             </p>
         </div>
     </body>

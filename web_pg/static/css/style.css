@@ -12,11 +12,27 @@ div.container-fluid{
     height: 100px;
 }
 
+p.disclaimer{
+    font-family: 'Dosis', sans-serif;
+    font-size:16px;
+    color:black;
+    font-style: oblique;
+}
+
 thead.table_header{
     text-align:center;
     font-weight:1500;
     color:black;
     /* background-color:red; */
+}
+
+ul{
+    font-family: 'Dosis', sans-serif;
+    font-size:16px;
+    color:black;
+    list-style-type: square;
+    list-style-position: outside;
+    list-style-image: none;
 }
 
 table{
@@ -47,7 +63,8 @@ div.row{
     padding-top:50px;
     font-family: 'Dosis', sans-serif;
     font-weight:300;
-    font-size:22px;
+    font-size:26px;
+
 }
 #home_title {
     padding-top:60px;
@@ -56,6 +73,10 @@ div.row{
     font-family: 'Dosis', sans-serif;
     font-weight:500;
     color:#fff;
+}
+
+#button_action:active{
+    color: rgb(222,38,38);
 }
 
 p {
