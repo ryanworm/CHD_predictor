@@ -1,3 +1,6 @@
+h1{
+    font-family: 'Dosis', sans-serif
+}
 body {
     background-color: rgb(255, 255, 255);
     padding: 10px;
@@ -7,6 +10,26 @@ body {
 div.container-fluid{
     background-color: #000000;
     height: 100px;
+}
+
+thead.table_header{
+    text-align:center;
+    font-weight:1500;
+    color:black;
+    /* background-color:red; */
+}
+
+table{
+    font-family: 'Dosis', sans-serif
+}
+.column1{
+    text-align:left;
+    font-weight:1200;
+    font-style: oblique;
+}
+
+.column2, .column3{
+    text-align:right;
 }
 
 #logo{

@@ -24,7 +24,7 @@ def result():
         else: 
             sex = 0
         sysBP = float(request.form.get('sysBP'))
-        chol = float(request.form.get('totChol'))
+        totCHO = float(request.form.get('totChol'))
         glucose = float(request.form.get('glucose'))
         bmi = float(request.form.get('BMI'))
         restingHR = float(request.form.get('heartRate'))
@@ -70,15 +70,88 @@ def result():
     result = predict_outcome(np.array(form_data).reshape(-1,11))
     # print(result)
 
-    if (sex == "Male" and age >50):
-        non_ml_result = "Unusual"
+    #age
+    if (age >= 65): 
+        non_ml_age = "Increased Risk"
+    else: 
+        non_ml_age = "Lower Risk"
+
+    #sex
+    if (sex == "Male"):
+        non_ml_sex = "Increased Risk"
     else:
-        non_ml_result  = "No Result"
-        
+        non_ml_sex  = "Lower Risk"
+
+    #sysBP
+    if (sysBP < 120):
+        non_ml_bp = "Low Risk"
+    elif (sysBP >= 120 & sysBP <= 129):
+        non_ml_bp  = "Increased Risk"
+    else: 
+        non_ml_bp = "High Risk"
+
+    #cholesterol levels
+    if (totCHO <= 200):
+        non_ml_CHO = "Low Risk"
+    else:
+        non_ml_CHO  = "Increased Risk"
+
+    #blood glucose
+    if (glucose < 140):
+        non_ml_glucose = "Low Risk"
+    elif (glucose >= 140 & glucose < 200):
+        non_ml_glucose = "Increased Risk"
+    else:
+        non_ml_glucose = "High Risk"
+
+    #bmi
+    if (bmi < 18.5):
+        non_ml_bmi = "Increased Risk"
+    elif (bmi  >= 18.5 & bmi  <= 24.9):
+        non_ml_bmi = "Low Risk"
+    elif (bmi >= 25 & bmi <= 29.9):
+        non_ml_bmi = "Increased Risk"
+    else: 
+        non_ml_bmi = "High Risk"
+
+    #heartrate
+    if (restingHR < 90):
+        non_ml_hr = "Low Risk"
+    elif (restingHR >= 90 & restingHR < 100):
+        non_ml_hr = "Increased Risk"
+    else:
+        non_ml_hr = "High Risk"
+
+    #smoking
+    if (cigs == 0):
+        non_ml_smoking = "Low Risk"
+    else: 
+        non_ml_smoking = "Increased Risk"
+
+    #education
+    if (education <= 2):
+        non_ml_education = "Increased Risk"
+    else: 
+        non_ml_education = "Low Risk"
+
+    #blood pressure
+    if (bpMed == 1): 
+        non_ml_bpMed = "Increased Risk"
+    else: 
+        non_ml_bpMed = "Low Risk"
+
+    #previous stroke
+    if (stroke == 1):
+        non_ml_stroke = "Increased Risk"
+    else: 
+        non_ml_stroke = "Low Risk"
 
     # return jsonify(form_data) 
-    return render_template('results.html', results_output = result, Age =  age, Sex = sex_raw, SysBP = Systolic_BP, Cholesterol = chol, Glucose = glucose, 
-    BMI = bmi, Resting_HR = restingHR, Cigs = cigs, Education = education_raw, BP_Medication = bpMed_raw, Stroke = stroke_raw, non_ml_output =  non_ml_result  )
+    return render_template('results.html', results_output = result, Age =  age, Sex = sex_raw , Sys_BP = sysBP, 
+     Tot_CHO = totCHO, glucose = glucose, BMI = bmi, HR = restingHR, Smoking = cigs, Education = education_raw,
+     bpMed = bpMed_raw, Prev_stroke = stroke_raw,   non_ml_age =  non_ml_age, non_ml_sex = non_ml_sex, non_ml_bp = non_ml_bp, 
+     non_ml_CHO = non_ml_CHO,  non_ml_glucose =  non_ml_glucose, non_ml_bmi = non_ml_bmi,  non_ml_HR =  non_ml_hr, 
+     non_ml_smoking = non_ml_smoking, non_ml_education = non_ml_education, non_ml_bpMed = non_ml_bpMed,  non_ml_stroke =  non_ml_stroke)
     # return(form_data)
 
 if __name__=="__main__":

@@ -13,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous">
         </script>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span> 
                     </button>
-                    <img src="../images/Capture2.PNG" id="logo" alt="HeartLogo" >
+                    <img src="../static/images/Capture2.PNG" id="logo" alt="HeartLogo" >
                     <a class="navbar-brand no-margins" id="home_title" href="index.html">
                         PredictiveAnalytics
                     </a>
@@ -39,8 +39,8 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Analysis
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="../../templates/health_intake.html">Intake Form</a></li>
-                            <li><a href="../../templates/results.html">Results</a></li>
+                            <li><a href="health_intake.html">Intake Form</a></li>
+                            <li><a href="results.html">Results</a></li>
                         </ul>
                         </li>
                     <li class="dropdown">
@@ -59,6 +59,7 @@
                                 <li><a href="symptoms.html">Symptoms</a></li>
                                 <li><a href="riskfactors.html">Risk Factors</a></li>
                                 <li><a href="prevention.html">Prevention</a></li>
+                                <li><a href="treatment.html">Treatment</a></li>
                             </ul>
                             </li>
                 </ul>
@@ -70,13 +71,8 @@
                     <div class="col-sm-12 col-md-8" id="bodytext">
             <h1 class="plot-info">Methods</h1>
             <p class="plot-info">
-                Our machine learning algorithm used the data collected from the Framingham Heart Study. The Framingham 
-                Heart Study (link to wikipedia) is a long term, on-going research study that led to much of our current
-                knowledge the impacts of lifestyle on cardiovascular health.  
-                <br>
-                <br>
                 The dataset utlized publically availible data from kaggle (link) and was processed omitting any null values
-                or redundant elements (training factors?). Processing the data in this manner led to ~15% data loss leaving us 
+                or redundant attributes. Processing the data in this manner led to ~15% data loss leaving us 
                 with a dataset of n=3658. This was deemed sufficient for our non-production purposes. 
                 <br>
                 <br>

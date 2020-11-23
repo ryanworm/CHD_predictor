@@ -30,7 +30,7 @@
                         <span class="icon-bar"></span> 
                     </button>
                     <img src="../static/images/Capture2.PNG" id="logo" alt="HeartLogo" >
-                    <a class="navbar-brand no-margins" id="home_title" href="../static/html/index.html">
+                    <a class="navbar-brand no-margins" id="home_title" href="index.html">
                       PredictiveAnalytics
                   </a>
               </div>
@@ -48,18 +48,19 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dataset
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="../static/html/methods.html">Methods</a></li>
-                            <li><a href="../static/html/framingham.html">Framingham Study</a></li>
+                            <li><a href="methods.html">Methods</a></li>
+                            <li><a href="framingham.html">Framingham Study</a></li>
                         </ul>
                         </li>
                     <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Heart Disease
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="../static/html/about.html">About</a></li>
-                                <li><a href="../static/html/symptoms.html">Symptoms</a></li>
-                                <li><a href="../static/html/riskfactors.html">Risk Factors</a></li>
-                                <li><a href="../static/html/prevention.html">Prevention</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="symptoms.html">Symptoms</a></li>
+                                <li><a href="riskfactors.html">Risk Factors</a></li>
+                                <li><a href="prevention.html">Prevention</a></li>
+                                <li><a href="treatment.html">Treatment</a></li>
                             </ul>
                             </li>
                 </ul>
@@ -73,108 +74,8 @@
             <form action="/request" method="post">
                 <div class="form-group">
                   <label for="exampleFormControlSelect1">Age</label>
-                  <select class="form-control" name="age" id="FormControlSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
-                    <option>13</option>
-                    <option>14</option>
-                    <option>15</option>
-                    <option>16</option>
-                    <option>17</option>
-                    <option>18</option>
-                    <option>19</option>
-                    <option>20</option>
-                    <option>21</option>
-                    <option>22</option>
-                    <option>23</option>
-                    <option>24</option>
-                    <option>25</option>
-                    <option>26</option>
-                    <option>27</option>
-                    <option>28</option>
-                    <option>29</option>
-                    <option>30</option>
-                    <option>31</option>
-                    <option>32</option>
-                    <option>33</option>
-                    <option>34</option>
-                    <option>35</option>
-                    <option>36</option>
-                    <option>37</option>
-                    <option>38</option>
-                    <option>39</option>
-                    <option>40</option>
-                    <option>41</option>
-                    <option>42</option>
-                    <option>43</option>
-                    <option>44</option>
-                    <option>45</option>
-                    <option>46</option>
-                    <option>47</option>
-                    <option>48</option>
-                    <option>49</option>
-                    <option>50</option>
-                    <option>51</option>
-                    <option>52</option>
-                    <option>53</option>
-                    <option>54</option>
-                    <option>55</option>
-                    <option>56</option>
-                    <option>57</option>
-                    <option>58</option>
-                    <option>59</option>
-                    <option>60</option>
-                    <option>61</option>
-                    <option>62</option>
-                    <option>63</option>
-                    <option>64</option>
-                    <option>65</option>
-                    <option>66</option>
-                    <option>67</option>
-                    <option>68</option>
-                    <option>69</option>
-                    <option>70</option>
-                    <option>71</option>
-                    <option>72</option>
-                    <option>73</option>
-                    <option>74</option>
-                    <option>75</option>
-                    <option>76</option>
-                    <option>77</option>
-                    <option>78</option>
-                    <option>79</option>
-                    <option>80</option>
-                    <option>81</option>
-                    <option>82</option>
-                    <option>83</option>
-                    <option>84</option>
-                    <option>85</option>
-                    <option>86</option>
-                    <option>87</option>
-                    <option>88</option>
-                    <option>89</option>
-                    <option>90</option>
-                    <option>91</option>
-                    <option>92</option>
-                    <option>93</option>
-                    <option>94</option>
-                    <option>95</option>
-                    <option>96</option>
-                    <option>97</option>
-                    <option>98</option>
-                    <option>99</option>
-                    <option>100</option>
-                  </select>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Age">
+                    <small id="emailHelp" class="form-text text-muted">Enter your age in years</small>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Sex</label>
@@ -184,64 +85,34 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Systolic Blood Pressure</label>
-                    <select class="form-control" name="sysBP" id="FormControlSelect3">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
+                    <label for="exampleFormControlSelect1">Systomic Blood Pressure</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Systolic Blood Pressure">
+                    <small id="emailHelp" class="form-text text-muted">Enter your systolic blood pressure (one sig-digit)</small>
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Cholesterol Levels</label>
-                    <select class="form-control" name="totChol" id="FormControlSelect4">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
+                    <label for="exampleFormControlSelect1">Total Cholesterol</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Total Cholesterol">
+                    <small id="emailHelp" class="form-text text-muted">Enter your total Cholesterol (mg/dL)</small>
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Blood Glucose</label>
-                    <select class="form-control" name="glucose" id="FormControlSelect5">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Blood Glucose">
+                    <small id="emailHelp" class="form-text text-muted">Enter your blood glucose level (mg/dL)</small>
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Body Mass Index</label>
-                    <select class="form-control" name="BMI" id="FormControlSelect6">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
+                    <label for="exampleFormControlSelect1">Body Mass Index (BMI)</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="BMI">
+                    <small id="emailHelp" class="form-text text-muted">Enter your BMI ( height (m) / mass<sup>2</sup> (kg) )</small>
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Resting Heart Rate</label>
-                    <select class="form-control" name= "heartRate" id="FormControl7">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
+                    <label for="exampleFormControlSelect1">Heart Rate</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Resting heart rate">
+                    <small id="emailHelp" class="form-text text-muted">Enter your resting heart rate (beats/min)</small>
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Cigarettes per day</label>
-                    <select class="form-control" name="cigsPerDay" id="FormControl8">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
+                    <label for="exampleFormControlSelect1">Smoking</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Cigarette Smoking">
+                    <small id="emailHelp" class="form-text text-muted">How many cigarettes do you smoke in a day?</small>
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Education</label>

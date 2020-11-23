@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
+
 <body>
     <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -59,6 +60,7 @@
                                 <li><a href="symptoms.html">Symptoms</a></li>
                                 <li><a href="riskfactors.html">Risk Factors</a></li>
                                 <li><a href="prevention.html">Prevention</a></li>
+                                <li><a href="treatment.html">Treatment</a></li>
                             </ul>
                             </li>
                 </ul>
@@ -66,15 +68,13 @@
             </div>
             </nav>
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-8" id="bodytext">
-            <h1 class="plot-info">Results</h1>
+            <h1 class="plot-info">Results: {{ results_output }}</h1>
             <!-- <a target="_blank" href="Web-Design-Challenge\Resources\fig2.png">
                 <img src="Web-Design-Challenge\Resources\fig2.png" alt="Latitude and Humidity Plot" class="plot-img">
             </a> -->
             <p>
-                Our machine learning algorithm used the data collected from the Framingham Heart Study. The Framingham 
-                Heart Study (link to wikipedia) is a long term, on-going research study that led to much of our current
+                Our machine learning algorithm used the data collected from the Framingham heart study. The Framingham 
+                heart study is a long term, on-going research study that led to much of our current
                 knowledge the impacts of lifestyle on cardiovascular health.  
                 <br>
                 <br>
@@ -86,26 +86,82 @@
                 To ensure reliable training of our machine learning algorithm, we upsampled our "CHD positive" samples, resulting 
                 in a dataset of n=6202. 
             </p>
-            <!-- <h1> {{results_output}}</h1>
-            <h1> {{Age}}</h1> -->
+            </div>
+                <div class="container">
+                <div class="table">
             <table>
-                <thead>
-                  <tr class="table100-head">
-                    <th class="column1">String Input</th>
-                    <th colspan="2" class="column1">User Input Assessment Table</th>
-                  </tr>
+                <thead class="table_header col-md-8">
+                    <th>Identifying Risk Factors</th>
                 </thead>
                 <tbody>
                     <tr>
-                      <td rowspan="6" class="column1"></td>
                       <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
-                      <td class="column1">{{Age}}</td>
-                      <td class="column2">{{ results_output}}</td>
-                      <td class="column2">{{ non_ml_output}}</td>
+                      <td class="column1">Age</td>
+                      <td class="column2">{{ Age }}</td>
+                      <td class="column3">{{ non_ml_age }}</td>
                     </tr>                  
+                    <tr>
+                        <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
+                        <td class="column1">Sex</td>
+                        <td class="column2">{{ Sex }}</td>
+                        <td class="column3">{{ non_ml_sex }}</td>
+                      </tr>
+                      <tr>
+                        <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
+                        <td class="column1">Systolic Blood Pressure</td>
+                        <td class="column2">{{ Sys_BP }}</td>
+                        <td class="column3">{{ non_ml_bp }}</td>
+                      </tr>            
+                      <tr>
+                        <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
+                        <td class="column1">Total Cholesterol</td>
+                        <td class="column2">{{ Tot_ CHO }}</td>
+                        <td class="column3">{{ non_ml_cho }}</td>
+                      </tr>  
+                      <tr>
+                        <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
+                        <td class="column1">Blood Glucose</td>
+                        <td class="column2">{{ glucose }}</td>
+                        <td class="column3">{{ non_ml_glucose }}</td>
+                      </tr>  
+                      <tr>
+                        <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
+                        <td class="column1">Body Mass Index (BMI)</td>
+                        <td class="column2">{{ BMI }}</td>
+                        <td class="column3">{{ non_ml_bmi }}</td>
+                      </tr>  
+                      <tr>
+                        <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
+                        <td class="column1">Heart Rate</td>
+                        <td class="column2">{{ HR }}</td>
+                        <td class="column3">{{ non_ml_HR }}</td>
+                      </tr>  
+                      <tr>
+                        <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
+                        <td class="column1">Smoking</td>
+                        <td class="column2">{{ Smoking }}</td>
+                        <td class="column3">{{ non_ml_smoking }}</td>
+                      </tr>  
+                      <tr>
+                        <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
+                        <td class="column1">Education</td>
+                        <td class="column2">{{ Education }}</td>
+                        <td class="column3">{{ non_ml_education }}</td>
+                      </tr>  
+                      <tr>
+                        <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
+                        <td class="column1">Blood Pressure Medication</td>
+                        <td class="column2">{{ bpMed }}</td>
+                        <td class="column3">{{ non_ml_med }}</td>
+                      </tr>  
+                      <tr>
+                        <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
+                        <td class="column1">Previous Stroke</td>
+                        <td class="column2">{{ Prev_stroke }}</td>
+                        <td class="column3">{{ non_ml_stroke }}</td>
+                      </tr>  
                 </tbody>
               </table>
-              <br>
         </div>
     </body>
 
