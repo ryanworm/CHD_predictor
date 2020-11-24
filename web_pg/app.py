@@ -1,5 +1,5 @@
 import flask 
-from flask import request, render_template, jsonify
+from flask import request, render_template, jsonify, redirect
 import numpy as np
 from predictor_api import predict_outcome
 
@@ -11,7 +11,7 @@ app = flask.Flask(__name__)
 
 @app.route("/")
 def main():
-    return render_template('index.html')
+    return redirect('static/html/index.html', code=302)
 
 @app.route("/request", methods= ['POST'])
 def result():
