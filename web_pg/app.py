@@ -85,7 +85,7 @@ def result():
     #sysBP
     if (sysBP < 120):
         non_ml_bp = "Low Risk"
-    elif (sysBP >= 120 & sysBP <= 129):
+    elif (sysBP >= 120 and sysBP <= 129):
         non_ml_bp  = "Increased Risk"
     else: 
         non_ml_bp = "High Risk"
@@ -99,7 +99,7 @@ def result():
     #blood glucose
     if (glucose < 140):
         non_ml_glucose = "Low Risk"
-    elif (glucose >= 140 & glucose < 200):
+    elif (glucose >= 140 and glucose < 200):
         non_ml_glucose = "Increased Risk"
     else:
         non_ml_glucose = "High Risk"
@@ -107,9 +107,9 @@ def result():
     #bmi
     if (bmi < 18.5):
         non_ml_bmi = "Increased Risk"
-    elif (bmi  >= 18.5 & bmi  <= 24.9):
+    elif (bmi  >= 18.5 and bmi  <= 24.9):
         non_ml_bmi = "Low Risk"
-    elif (bmi >= 25 & bmi <= 29.9):
+    elif (bmi >= 25 and bmi <= 29.9):
         non_ml_bmi = "Increased Risk"
     else: 
         non_ml_bmi = "High Risk"
@@ -117,7 +117,7 @@ def result():
     #heartrate
     if (restingHR < 90):
         non_ml_hr = "Low Risk"
-    elif (restingHR >= 90 & restingHR < 100):
+    elif (restingHR >= 90 and restingHR < 100):
         non_ml_hr = "Increased Risk"
     else:
         non_ml_hr = "High Risk"
@@ -147,12 +147,16 @@ def result():
         non_ml_stroke = "Low Risk"
 
     # return jsonify(form_data) 
-    return render_template('results.html', results_output = result, Age =  age, Sex = sex_raw , Sys_BP = sysBP, 
-     Tot_CHO = totCHO, glucose = glucose, BMI = bmi, HR = restingHR, Smoking = cigs, Education = education_raw,
-     bpMed = bpMed_raw, Prev_stroke = stroke_raw,   non_ml_age =  non_ml_age, non_ml_sex = non_ml_sex, non_ml_bp = non_ml_bp, 
+    return render_template('results.html', results_output = result, 
+    Age =  age, Sex = sex_raw , Sys_BP = sysBP, 
+     totChol = totCHO, glucose = glucose, BMI = bmi, HR = restingHR, Smoking = cigs, Education = education_raw,
+     bpMed = bpMed_raw, Prev_stroke = stroke_raw,  
+     
+     non_ml_age =  non_ml_age, non_ml_sex = non_ml_sex, non_ml_bp = non_ml_bp, 
      non_ml_CHO = non_ml_CHO,  non_ml_glucose =  non_ml_glucose, non_ml_bmi = non_ml_bmi,  non_ml_HR =  non_ml_hr, 
      non_ml_smoking = non_ml_smoking, non_ml_education = non_ml_education, non_ml_bpMed = non_ml_bpMed,  non_ml_stroke =  non_ml_stroke)
     # return(form_data)
+   
 
 if __name__=="__main__":
     app.run(debug=True)
