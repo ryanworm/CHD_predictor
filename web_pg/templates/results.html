@@ -112,7 +112,7 @@
                         <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
                         <td class="column1">Blood Glucose</td>
                         <td class="column2">{{ glucose }}</td>
-                        <td class="column3">{{ non_ml_glucose }}</td>
+                        <td class="column3">{% if non_ml_glucose[0] %} <span class='high'>{{ non_ml_glucose[1] }}</span> {% else %} {{ non_ml_glucose[1] }} {% endif %}</td>
                       </tr>  
                       <tr>
                         <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
@@ -141,7 +141,7 @@
                       <tr>
                         <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
                         <td class="column1">Blood Pressure Medication</td>
-                        <td class="column2">{{ bpMed }}</td>
+                        <td class="column2">{{ bpMed }} </td>
                         <td class="column3">{{ non_ml_bpMed }}</td>
                       </tr>  
                       <tr>

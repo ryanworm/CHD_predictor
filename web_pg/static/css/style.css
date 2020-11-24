@@ -94,4 +94,7 @@ p {
     width: 66%
 }
 
-
+.high {
+    color:rgb(222,38,38);
+    font-weight: bold;
+}

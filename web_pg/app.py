@@ -98,11 +98,11 @@ def result():
 
     #blood glucose
     if (glucose < 140):
-        non_ml_glucose = "Low Risk"
+        non_ml_glucose = (0, "Low Risk")
     elif (glucose >= 140 and glucose < 200):
-        non_ml_glucose = "Increased Risk"
+        non_ml_glucose = (0, "Increased Risk")
     else:
-        non_ml_glucose = "High Risk"
+        non_ml_glucose = (1, "High Risk")
 
     #bmi
     if (bmi < 18.5):
