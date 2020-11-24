@@ -70,12 +70,94 @@
             <p class="plot-info">
                 The dataset utlized public data from <a href="https://www.kaggle.com/amanajmera1/framingham-heart-study-dataset">kaggle</a> and was processed to omit null values
                 and redundant attributes. From an origonal data set of n=4240 pre-processing the data in this manner led to 15.21% data loss leaving us 
-                with a dataset of n=3658. This was deemed sufficient for our non-production purposes. 
+                with a sample n=3658. This was deemed sufficient for our non-production purposes. Our dataset only contained 15.18% positive for CHD
+                within 10 years so we upscaled our data to ensure a balanced sample for training purpopses (n=6202).
                 <br>
+                <img src="../images/bar_chart2.PNG" class="barchart" alt="barchart" >
+                Training multiple types of models we chose to go with a random forest model as it gave us the highest F1 (accuracy) value of 0.96. This may result in slight over fitting,
+                but for as it gave us the best predictive value for both negative and positive cases we decided to utilize it for now. 
+            </p>             
+            <p class="plot-info">
+                <table>
+                    <th>Random Forest Classifier</th>
+                    <tr>
+                        <td>Bootstrap:</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td>ccp_alpha:</td>
+                        <td>0.0</td>
+                    </tr>
+                    <tr>
+                        <td>class_weight</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>criterion</td>
+                        <td>gini</td>
+                    </tr>
+                    <tr>
+                        <td>max_depth</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>max_features</td>
+                        <td>auto</td>
+                    </tr>
+                    <tr>
+                        <td>max_leaf_nodes</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>max_samples</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>min_impurity_decrease</td>
+                        <td>0.0</td>
+                    </tr>
+                    <tr>
+                        <td>min_impurity_split</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>min_samples_leaf</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>min_samples_split</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>min_weight_fraction_leaf</td>
+                        <td>0.0</td>
+                    </tr>
+                    <tr>
+                        <td>n_estimators</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>n_jobs</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>oob_score</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <td>random_state</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>verbose</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>warm_start</td>
+                        <td>False</td>
+                    </tr>
+                </table>
                 <br>
-                Our dataset only contained 15.18% positive for CHD within 10 years so we upscaled to ensure a balanced sample for training purpopses. 
-                This left us with a sample of n=6202.   
-
             </p>
         </div>
     </body>

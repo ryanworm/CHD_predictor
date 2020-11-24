@@ -18,6 +18,12 @@ p.disclaimer{
     color:black;
     font-style: oblique;
 }
+.response-header, .symptoms-header{
+    font-family: 'Dosis', sans-serif;
+    font-size:20px;
+    font-weight:bold;
+    color:red;
+}
 
 thead.table_header{
     text-align:center;
@@ -30,9 +36,23 @@ ul{
     font-family: 'Dosis', sans-serif;
     font-size:16px;
     color:black;
-    list-style-type: square;
-    list-style-position: outside;
-    list-style-image: none;
+}
+ul.a{
+    display: list-item;          /* This has to be "list-item"                                               */
+    list-style-type: disc;       /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type     */
+    list-style-position: inside;
+}
+
+li {
+    font-family: 'Dosis', sans-serif;
+    font-size:16px;
+    color:black;
+    padding-left:20px;
+}
+
+span.silent{
+    font-weight: bold;
+    /* font-style: italic; */
 }
 
 table{
@@ -92,6 +112,10 @@ p {
     margin-top: 20px;
     margin-bottom: 20 px;
     width: 66%
+}
+.barchart{
+    width:800px;
+    height:auto;    
 }
 
 .high {
