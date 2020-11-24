@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dataset</title>
+    <title>Framingham Study</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;700&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
@@ -27,20 +28,20 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span> 
                     </button>
-                    <img src="../images/Capture2.PNG" id="logo" alt="HeartLogo" >
+                    <img src="../images/Capture2.PNG" id="logo" alt="HeartLogo">
                     <a class="navbar-brand no-margins" id="home_title" href="index.html">
                         PredictiveAnalytics
                     </a>
                 </div>
                 <div class="collapse navbar-collapse navbar-right" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="health_intake.html">
-                        <span class="glyphicon glyphicon-th-large">
-                        </span>
-                        Health Intake
-                    </a></li>
+                    <ul class="nav navbar-nav">
+                        <li><a id="button_action" href="health_intake.html">
+                            <span class="glyphicon glyphicon-plus">	
+                            </span>
+                            Health Intake
+                        </a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dataset
+                        <a class="dropdown-toggle" id="button_action" data-toggle="dropdown" href="#">Dataset
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="methods.html">Methods</a></li>
@@ -48,13 +49,14 @@
                         </ul>
                         </li>
                     <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Heart Disease
+                            <a class="dropdown-toggle" id="button_action" data-toggle="dropdown" href="#">Heart Disease
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="symptoms.html">Symptoms</a></li>
                                 <li><a href="riskfactors.html">Risk Factors</a></li>
-                                <li><a href="prevention.html">Prevention</a></li>
+                                <li><a href="prevention.html">Diagnosis</a></li>
+                                <li><a href="treatment.html">Treatment</a></li>
                             </ul>
                             </li>
                 </ul>
@@ -64,23 +66,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-8" id="bodytext">
-            <h1 class="plot-info">The boring stuff...</h1>
+            <h1>The Study</h1>
             <!-- <a target="_blank" href="Web-Design-Challenge\Resources\fig2.png">
                 <img src="Web-Design-Challenge\Resources\fig2.png" alt="Latitude and Humidity Plot" class="plot-img">
             </a> -->
-            <p class="plot-info">
-                Our machine learning algorithm used the data collected from the <a href="https://en.wikipedia.org/wiki/Framingham_Heart_Study">Framingham Heart Study</a>. The Framingham 
-                Heart Study is a long term, on-going research study that led to much of our current
-                knowledge the impacts of lifestyle on cardiovascular health.  
+            <p>
+                The Framingham heart study begain in 1948 when 5000 residents of Framingham, MA agreed to participate in 
+                a long-term ongoing study of heart disease. The residents were between 30-60 years of age at the time of
+                 enrollment and underwent physicals consisting of electrocardiogram, chest X-ray and labratory tests. 
                 <br>
+                The Framingham studies are credited with multiple fundamental findings including the relationship between
+                heart disease and smoking, obesity, exercise, high blood pressure, cholesterol, and psychosocial factors. 
+                The study is now one of the longest and most important epidemiolgical studies in medical history, and
+                responsible for our most fundamental understandings of heart pathophysiology.<br>
+                In 1971 began it's second phase, recruiting 5000 children of the origonal cohort along with their spouses, and is coloberating with 
+                research institutes to provide better understanding of osteoporosis, nutrition, as well as ENT and lung conditions.
+                The study now includes the third generation of participants and is now also studying mental heath along with the
+                continued research into cardiopulmonary physiology. 
                 <br>
-                The dataset utlized publically availible data from <a href="https://www.kaggle.com/amanajmera1/framingham-heart-study-dataset">kaggle</a> and was processed omitting any 
-                null values as well as overlapping attributes (eg. glucose levels and diabetes). Processing the data in this manner led to ~15% data loss leaving us 
-                with a dataset of n=3658. This was deemed sufficient for our non-production purposes. 
-                <br>
-                <br>
-                To ensure reliable training of our machine learning algorithm, we upsampled our "CHD positive" samples, resulting 
-                in a dataset of n=6202. 
+
             </p>
         </div>
     </body>

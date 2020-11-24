@@ -14,7 +14,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous">
         </script>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -29,21 +29,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span> 
                     </button>
-                    <img src="../static/images/Capture2.PNG" id="logo" alt="HeartLogo" >
+                    <img src="../images/Capture2.PNG" id="logo" alt="HeartLogo" >
                     <a class="navbar-brand no-margins" id="home_title" href="index.html">
                       PredictiveAnalytics
                   </a>
               </div>
               <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
-                  <li class="dropdown">
-                      <a class="dropdown-toggle" id="button_action" data-toggle="dropdown" href="#">Analysis
-                      <span class="caret"></span></a>
-                      <ul class="dropdown-menu">
-                          <li><a href="health_intake.html">Intake Form</a></li>
-                          <li><a href="results.html">Results</a></li>
-                      </ul>
-                      </li>
+                <li><a id="button_action" href="health_intake.html">
+                  <span class="glyphicon glyphicon-plus">	
+                  </span>
+                  Health Intake
+              </a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" id="button_action" data-toggle="dropdown" href="#">Dataset
                         <span class="caret"></span></a>
@@ -73,50 +70,50 @@
             <h1>Health Intake</h1>
             <form action="/request" method="post">
                 <div class="form-group">
-                  <label for="exampleFormControlSelect1">Age</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Age">
-                    <small id="emailHelp" class="form-text text-muted">Enter your age in years</small>
+                  <label for="FormControlSelect1">Age</label>
+                    <input class="form-control" name="age" id="FormControlSelect1" placeholder="Age">
+                    <small class="form-text text-muted">Enter your age in years</small>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Sex</label>
-                    <select class="form-control" name="male" id="FormControlSelect2">
+                    <label for="Sex">Sex</label>
+                    <select class="form-control" name="male" id="FormControlSelect2" placeholder="Sex">
                       <option>Male</option>
                       <option>Female</option>
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Systomic Blood Pressure</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Systolic Blood Pressure">
-                    <small id="emailHelp" class="form-text text-muted">Enter your systolic blood pressure (one sig-digit)</small>
+                    <label for="sysBP">Systomic Blood Pressure</label>
+                    <input  class="form-control" name="sysBP" id="FormControlSelect3" placeholder="Systolic Blood Pressure">
+                    <small class="form-text text-muted">Enter your systolic blood pressure (one sig-digit)</small>
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Total Cholesterol</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Total Cholesterol">
-                    <small id="emailHelp" class="form-text text-muted">Enter your total Cholesterol (mg/dL)</small>
+                    <label for="totCHO">Total Cholesterol</label>
+                    <input  class="form-control" name="totChol" id="FormControlSelect4"  placeholder="Total Cholesterol">
+                    <small  class="form-text text-muted">Enter your total Cholesterol (mg/dL)</small>
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Blood Glucose</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Blood Glucose">
-                    <small id="emailHelp" class="form-text text-muted">Enter your blood glucose level (mg/dL)</small>
+                    <label for="FormControlSelect5">Blood Glucose</label>
+                    <input class="form-control" name="glucose" id="FormControlSelect5" placeholder="Blood Glucose">
+                    <small class="form-text text-muted">Enter your blood glucose level (mg/dL)</small>
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Body Mass Index (BMI)</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="BMI">
-                    <small id="emailHelp" class="form-text text-muted">Enter your BMI ( height (m) / mass<sup>2</sup> (kg) )</small>
+                    <label for="FormControlSelect6">Body Mass Index (BMI)</label>
+                    <input class="form-control" name="BMI" id="FormControlSelect6" placeholder="BMI">
+                    <small class="form-text text-muted">Enter your BMI ( height (m) / mass<sup>2</sup> (kg) )</small>
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Heart Rate</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Resting heart rate">
-                    <small id="emailHelp" class="form-text text-muted">Enter your resting heart rate (beats/min)</small>
+                    <label for="FormControlSelect7">Heart Rate</label>
+                    <input  class="form-control" name="heartRate" id="FormControlSelect7" placeholder="Resting heart rate">
+                    <small class="form-text text-muted">Enter your resting heart rate (beats/min)</small>
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Smoking</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Cigarette Smoking">
-                    <small id="emailHelp" class="form-text text-muted">How many cigarettes do you smoke in a day?</small>
+                    <label for="FormControlSelect8">Smoking</label>
+                    <input class="form-control" name="cigsPerDay" id="FormControlSelect8" placeholder="Cigarettes per day">
+                    <small class="form-text text-muted">How many cigarettes do you smoke in a day?</small>
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Education</label>
-                    <select class="form-control" name="education" id="FormControl9">
+                    <label for="FormControlSelect9">Education</label>
+                    <select class="form-control" name="education" id="FormControl9" placeholder="Education">
                       <option>Some High School</option>
                       <option>High School Diploma</option>
                       <option>College Diploma</option>
@@ -124,15 +121,15 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Do you take blood pressure medication</label>
-                    <select class="form-control" name="BPMeds" id="FormControl10">
+                    <label for="FormControlSelect10">Do you take blood pressure medication</label>
+                    <select class="form-control" name="BPMeds" id="FormControlSelect10">
                       <option>No</option>
                       <option>Yes</option>
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Have you previously suffered a stroke?</label>
-                    <select class="form-control" name="prevalentStroke" id="FormControl11">
+                    <label for="FormControlSelect11">Have you previously suffered a stroke?</label>
+                    <select class="form-control" name="prevalentStroke" id="FormControlSelect11">
                       <option>No</option>
                       <option>Yes</option>
                     </select> 

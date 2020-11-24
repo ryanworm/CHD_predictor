@@ -13,7 +13,7 @@ app = flask.Flask(__name__)
 def main():
     return render_template('index.html')
 
-@app.route("/health_intake", methods= ['POST'])
+@app.route("/request", methods= ['POST'])
 def result():
     if request.method == 'POST':
         age = int(request.form.get('age'))
@@ -54,7 +54,7 @@ def result():
 
                
         form_data = []
-        form_data.append((age, sex, sysBP, chol, glucose, bmi, restingHR, cigs, education, bpMed, stroke))
+        form_data.append((age, sex, sysBP, totCHO, glucose, bmi, restingHR, cigs, education, bpMed, stroke))
         form_data = form_data[0]        
         
         # print(form_data)

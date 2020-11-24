@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Symptoms</title>
+    <title>Methods</title>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;700&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
@@ -34,12 +34,12 @@
                     </a>
                 </div>
                 <div class="collapse navbar-collapse navbar-right" id="myNavbar">
-                    <ul class="nav navbar-nav">
-                        <li><a id="button_action" href="health_intake.html">
-                            <span class="glyphicon glyphicon-plus">	
-                            </span>
-                            Health Intake
-                        </a></li>
+                <ul class="nav navbar-nav">
+                    <li><a id="button_action" href="health_intake.html">
+                        <span class="glyphicon glyphicon-plus">	
+                        </span>
+                        Health Intake
+                    </a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" id="button_action" data-toggle="dropdown" href="#">Dataset
                         <span class="caret"></span></a>
@@ -63,23 +63,19 @@
                 </div>
             </div>
             </nav>
-            <div class="container">
+        <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-8" id="bodytext">
-            <h1 class="plot-info">Symptoms</h1>
-            <!-- <a target="_blank" href="Web-Design-Challenge\Resources\fig2.png">
-                <img src="Web-Design-Challenge\Resources\fig2.png" alt="Latitude and Humidity Plot" class="plot-img">
-            </a> -->
+            <h1 class="plot-info">Methods</h1>
             <p class="plot-info">
-                For many individuals the first sign that they have CHD is a heart attack. High blood pressure and underlying conditions 
-                can manifest for years without any discomfort or other symptoms. The insideous nature has led to high blood pressure to 
-                be known as the "silent killer".
+                The dataset utlized public data from <a href="https://www.kaggle.com/amanajmera1/framingham-heart-study-dataset">kaggle</a> and was processed to omit null values
+                and redundant attributes. From an origonal data set of n=4240 pre-processing the data in this manner led to 15.21% data loss leaving us 
+                with a dataset of n=3658. This was deemed sufficient for our non-production purposes. 
                 <br>
-                Symptoms of a heart attack include:
                 <br>
-                It should be noted that the symptoms of heart attacks differ between men and women. Women present with ... ... ... more 
-                often and these should be considered just as severe as the more "traditional" presentation.  
-                
+                Our dataset only contained 15.18% positive for CHD within 10 years so we upscaled to ensure a balanced sample for training purpopses. 
+                This left us with a sample of n=6202.   
+
             </p>
         </div>
     </body>
