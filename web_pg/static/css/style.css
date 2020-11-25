@@ -118,7 +118,12 @@ p {
     height:auto;    
 }
 
-.high {
+.highrisk {
     color:rgb(222,38,38);
     font-weight: bold;
 }
+/* 
+.boldrisk {
+    color:rgb(222,38,38);
+    font-weight: bold;
+} */

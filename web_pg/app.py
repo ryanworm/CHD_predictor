@@ -23,6 +23,7 @@ def result():
             sex = 1
         else: 
             sex = 0
+        
         sysBP = float(request.form.get('sysBP'))
         totCHO = float(request.form.get('totChol'))
         glucose = float(request.form.get('glucose'))
@@ -77,24 +78,26 @@ def result():
         non_ml_age = "Lower Risk"
 
     #sex
-    if (sex == "Male"):
+    if (sex_raw == "Male"):
         non_ml_sex = "Increased Risk"
     else:
         non_ml_sex  = "Lower Risk"
 
     #sysBP
     if (sysBP < 120):
-        non_ml_bp = "Low Risk"
+        non_ml_bp = (0, "Low Risk")
     elif (sysBP >= 120 and sysBP <= 129):
-        non_ml_bp  = "Increased Risk"
+        non_ml_bp  = (0, "Increased Risk")
     else: 
-        non_ml_bp = "High Risk"
+        non_ml_bp = (1, "High Risk")
 
     #cholesterol levels
     if (totCHO <= 200):
-        non_ml_CHO = "Low Risk"
+        non_ml_CHO = (0, "Low Risk")
+    elif (totCHO >= 140 and totCHO < 200):
+        non_ml_CHO = (0, "Increased Risk")
     else:
-        non_ml_CHO  = "Increased Risk"
+        non_ml_CHO = (1, "High Risk")
 
     #blood glucose
     if (glucose < 140):
@@ -106,27 +109,27 @@ def result():
 
     #bmi
     if (bmi < 18.5):
-        non_ml_bmi = "Increased Risk"
+        non_ml_bmi = (1, "Increased Risk")
     elif (bmi  >= 18.5 and bmi  <= 24.9):
-        non_ml_bmi = "Low Risk"
+        non_ml_bmi = (0, "Low Risk")
     elif (bmi >= 25 and bmi <= 29.9):
-        non_ml_bmi = "Increased Risk"
+        non_ml_bmi = (0, "Increased Risk")
     else: 
-        non_ml_bmi = "High Risk"
+        non_ml_bmi = (1, "High Risk")
 
     #heartrate
     if (restingHR < 90):
-        non_ml_hr = "Low Risk"
+        non_ml_hr = (0, "Low Risk")
     elif (restingHR >= 90 and restingHR < 100):
-        non_ml_hr = "Increased Risk"
+        non_ml_hr = (0, "Increased Risk")
     else:
-        non_ml_hr = "High Risk"
+        non_ml_hr = (1, "High Risk")
 
     #smoking
     if (cigs == 0):
-        non_ml_smoking = "Low Risk"
+        non_ml_smoking = (0, "Low Risk")
     else: 
-        non_ml_smoking = "Increased Risk"
+        non_ml_smoking = (1, "High Risk")
 
     #education
     if (education <= 2):

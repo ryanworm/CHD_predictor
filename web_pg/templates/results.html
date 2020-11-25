@@ -95,37 +95,37 @@
                         <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
                         <td class="column1">Systolic Blood Pressure</td>
                         <td class="column2">{{ Sys_BP }}</td>
-                        <td class="column3">{{ non_ml_bp }}</td>
+                        <td class="column3">{% if non_ml_bp[0] %} <span class='highrisk'> {{ non_ml_bp[1] }}</span>{% else %} {{ non_ml_bp[1] }} {% endif %}</td>
                       </tr>            
                       <tr>
                         <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
                         <td class="column1">Total Cholesterol</td>
                         <td class="column2">{{ totChol }}</td>
-                        <td class="column3">{{ non_ml_CHO }}</td>
+                        <td class="column3">{% if non_ml_CHO[0] %} <span class="highrisk"> {{ non_ml_CHO[1] }}</span> {% else %} {{ non_ml_CHO[1] }} {% endif %}</td>
                       </tr>  
                       <tr>
                         <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
                         <td class="column1">Blood Glucose</td>
                         <td class="column2">{{ glucose }}</td>
-                        <td class="column3">{% if non_ml_glucose[0] %} <span class='high'>{{ non_ml_glucose[1] }}</span> {% else %} {{ non_ml_glucose[1] }} {% endif %}</td>
+                        <td class="column3">{% if non_ml_glucose[0] %} <span class='highrisk'>{{ non_ml_glucose[1] }}</span> {% else %} {{ non_ml_glucose[1] }} {% endif %}</td>
                       </tr>  
                       <tr>
                         <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
                         <td class="column1">Body Mass Index (BMI)</td>
                         <td class="column2">{{ BMI }}</td>
-                        <td class="column3">{{ non_ml_bmi }}</td>
+                        <td class="column3">{% if non_ml_bmi[0] %} <span class='highrisk'>{{ non_ml_bmi[1] }}</span> {% else %} {{ non_ml_bmi[1] }} {% endif %}</td>
                       </tr>  
                       <tr>
                         <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
                         <td class="column1">Heart Rate</td>
                         <td class="column2">{{ HR }}</td>
-                        <td class="column3">{{ non_ml_HR }}</td>
+                        <td class="column3">{%if non_ml_HR[0] %} <span class='highrisk'>{{ non_ml_HR[1] }}</span> {% else %} {{ non_ml_HR[1] }} {% endif %}</td>
                       </tr>  
                       <tr>
                         <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
                         <td class="column1">Smoking</td>
                         <td class="column2">{{ Smoking }}</td>
-                        <td class="column3">{{ non_ml_smoking }}</td>
+                        <td class="column3">{%if non_ml_smoking[0] %} <span class='highrisk'>{{ non_ml_smoking[1] }}</span>{% else %} {{ non_ml_smoking[1] }} {% endif %}</td>
                       </tr>  
                       <tr>
                         <!-- <td rowspan="6" class="column1">{{ chat_in }}</td> -->
