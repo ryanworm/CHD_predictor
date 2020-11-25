@@ -1,5 +1,8 @@
 h1{
-    font-family: 'Dosis', sans-serif
+    font-family: 'Dosis', sans-serif;
+}
+h3{
+    font-family: 'Dosis', sans-serif;
 }
 body {
     background-color: rgb(255, 255, 255);
@@ -60,12 +63,13 @@ table{
 }
 .column1{
     text-align:left;
-    font-weight:1200;
+    font-weight:550;
     font-style: oblique;
 }
 
 .column2, .column3{
     text-align:right;
+    font-weight:450;
 }
 
 #logo{
@@ -93,6 +97,10 @@ div.row{
     font-family: 'Dosis', sans-serif;
     font-weight:500;
     color:#fff;
+}
+
+#home_title:active{
+    color: rgb(222,38,38); 
 }
 
 #button_action:active{
