@@ -29,6 +29,10 @@ Uploading the app to heroku
 
 # Instructions
 ## Steps
+Download or clone the files contained in this repo. 
+Run a python -m http.server or any other required for this purpose.
+Load the files. 
 
+File description:
 
 
