@@ -57,7 +57,7 @@
                                 <li><a href="riskfactors.html">Risk Factors</a></li>
                                 <li><a href="prevention.html">Diagnosis</a></li>
                                 <li><a href="treatment.html">Treatment</a></li>
-                                <li><a href="https://docs.google.com/presentation/d/1XMjl4_DBYhohckhBWy3K0-iwzy4PjfBEekV9u-lBS2Q/edit?usp=sharing">Powerpoint Presentation</a></li>
+                                <li><a href="https://docs.google.com/presentation/d/1XMjl4_DBYhohckhBWy3K0-iwzy4PjfBEekV9u-lBS2Q/edit#slide=id.gad75b79394_1_42">Powerpoint Presentation</a></li>
                             </ul>
                             </li>
                 </ul>
@@ -75,8 +75,9 @@
                 within 10 years so we upscaled our data to ensure a balanced sample for training purpopses (n=6202).
                 <br>
                 <img src="../images/bar_chart2.PNG" class="barchart" alt="barchart" >
-                Training multiple types of models we chose to go with a random forest model as it gave us the highest F1 (accuracy) value of 0.96. This may result in slight over fitting,
-                but for as it gave us the best predictive value for both negative and positive cases we decided to utilize it for now. 
+                Random forest and decision tree models had the highest accuracy on training data but performed poorly in practical testing. The models underfit the 
+                data and had frequent false negative predictions for CHD. In order to increase our precision we used support vector classifier. Although a less accurate model, 
+                it performed far superior in identifying individuals at risk for CHD.                 
             </p>             
             <p class="plot-info">
                 <table>

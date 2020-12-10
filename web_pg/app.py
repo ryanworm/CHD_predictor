@@ -58,7 +58,7 @@ def result():
         form_data.append((age, sex, sysBP, totCHO, glucose, bmi, restingHR, cigs, education, bpMed, stroke))
         form_data = form_data[0]        
         
-        # print(form_data)
+        print(form_data)
 
   # invoke predict_outcome
         # CHD_risk = predict_outcome(form_data)
@@ -68,7 +68,7 @@ def result():
             #print("you are not at high risk of heart disease")
     
     # print(np.array(form_data))
-    result = predict_outcome(np.array(form_data).reshape(-1,11))
+    ml_result = predict_outcome(np.array(form_data).reshape(-1,11))
     # print(result)
 
     #age
@@ -150,11 +150,11 @@ def result():
         non_ml_stroke = "Low Risk"
 
     # return jsonify(form_data) 
-    return render_template('results.html', results_output = result, 
+    return render_template('results.html', results_output = ml_result, 
     Age =  age, Sex = sex_raw , Sys_BP = sysBP, 
      totChol = totCHO, glucose = glucose, BMI = bmi, HR = restingHR, Smoking = cigs, Education = education_raw,
      bpMed = bpMed_raw, Prev_stroke = stroke_raw,  
-     
+
      non_ml_age =  non_ml_age, non_ml_sex = non_ml_sex, non_ml_bp = non_ml_bp, 
      non_ml_CHO = non_ml_CHO,  non_ml_glucose =  non_ml_glucose, non_ml_bmi = non_ml_bmi,  non_ml_HR =  non_ml_hr, 
      non_ml_smoking = non_ml_smoking, non_ml_education = non_ml_education, non_ml_bpMed = non_ml_bpMed,  non_ml_stroke =  non_ml_stroke)
