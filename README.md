@@ -1,15 +1,38 @@
-# CHD_predictor
+# PredictiveAnalytics
 
-Final project for University of Toronto Data Analytics Boot Camp. 
+## Description
+The purpose of this project is to evaluate the user's risk for coronary heart disease. By treating heart disease 
+earlier we can improve patient outcomes without needing to resort to more expensive invasive treatments. This application allows medical professionals to input patient data and immedietly identify at risk individuals. This project is built with python using multiple libraries including numpy, pandas, matplotlib, scikit-learn, tensorflow and joblib.   
 
-The current pandemic has increased the strain on the health care system leading to early retirement for many doctors. 
-The increase ratio of patients to doctors will require streamlined medical care. Machine learning can be utilized
-to identify individuals at increased risk of heart disease and allow for early intervention. By treating heart disease 
-earlier we can improve patient outcomes without needing to resort to more expensive invasive treatments. 
+Step 1: 
+Building the machine learning model
 
-This application allows medical professionals to input patient data and immedietly identify at risk individuals.
-Webpage written in HMTL and CSS utilizing bootstrap and google fonts. 
+Step 2:
+Importing data from kaggle
+Identifying redundant attributes
+Cleaning data
+Upscaling data
 
-Framingham dataset publically availible from Kaggle.
+Step 3: 
+Train/Test/Split
+Building the ML models
+Testing and evaluating classifiers
 
-Machine learning using Keras. 
+Step 4: 
+Building the front end
+HTML pages 
+Submit form
+app.py and predictions.py
+
+Step 5: 
+Uploading the app to heroku
+
+# Instructions
+## Steps
+Download or clone the files contained in this repo. 
+Run a python -m http.server or any other required for this purpose.
+Load the files. 
+
+File description:
+
+
