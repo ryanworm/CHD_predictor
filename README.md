@@ -6,8 +6,8 @@ This application identifies risk individual risk catagories for coronary heart d
 * Used pandas to read in CSV dataset (n=4240)
 * Cleaned data of any partial datasets (n=645)
 * Data processing
-  * Removing similar attributes
-  * Upscaling
+ * To ensure that the training data contained enough positive CHD data the dataset was upscaled (n=6202).
+ * In order to create a more reliable model the like attributes were removed. This was done through a seaborn heatmap by comparing highly correlated attributes. Overlapping catagories such as "Smoker" and "Cigarettes" were deemed redundant and the binary option was removed. This allowed the attribute to have a magnitude and improved prediction accuracy.  
 * Machine Learning
   * Training the models
   * Picking our model
@@ -16,6 +16,7 @@ This application identifies risk individual risk catagories for coronary heart d
 # Tools/Packages Used
 * Numpy
 * Pandas
+* Seaborn
 * Matplotlib
 * TensorFlow
 * Joblib
