@@ -1,38 +1,34 @@
-# PredictiveAnalytics
+# Predictive Analytics
 
-## Description
-The purpose of this project is to evaluate the user's risk for coronary heart disease. By treating heart disease 
-earlier we can improve patient outcomes without needing to resort to more expensive invasive treatments. This application allows medical professionals to input patient data and immedietly identify at risk individuals. This project is built with python using multiple libraries including numpy, pandas, matplotlib, scikit-learn, tensorflow and joblib.   
+This application identifies risk individual risk catagories for coronary heart disease.   
 
-Step 1: 
-Building the machine learning model
+* Data downloaded from https://www.kaggle.com/amanajmera1/framingham-heart-study-dataset
+* Used pandas to read in CSV dataset (n=4240)
+* Cleaned data of any partial datasets (n=645)
+* Data processing
+  * Removing similar attributes
+  * Upscaling
+* Machine Learning
+  * Training the models
+  * Picking our model
+* Scoring of our model
 
-Step 2:
-Importing data from kaggle
-Identifying redundant attributes
-Cleaning data
-Upscaling data
+# Tools/Packages Used
+* Numpy
+* Pandas
+* Matplotlib
+* TensorFlow
+* Joblib
 
-Step 3: 
-Train/Test/Split
-Building the ML models
-Testing and evaluating classifiers
+# How to use:
+* Click on *Health Intake* header to the top right
+* Input your information 
+* Click submit
+* The results page will display your risk catagory (Hight/Low) as well as identifying personal risk factors based on your intake form. 
 
-Step 4: 
-Building the front end
-HTML pages 
-Submit form
-app.py and predictions.py
 
-Step 5: 
-Uploading the app to heroku
+Available on Heroku: https://predictivehealth.herokuapp.com/static/html/index.html
 
-# Instructions
-## Steps
-Download or clone the files contained in this repo. 
-Run a python -m http.server or any other required for this purpose.
-Load the files. 
 
-File description:
 
 
