@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Predicting Heart Disease</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;700&display=swap" rel="stylesheet">    
+    <link   rel="stylesheet" 
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous">
+    <link   rel="stylesheet" 
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+            integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+            crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous">
+    </script>
+    <link   rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" 
+                            class="navbar-toggle" 
+                            data-toggle="collapse" 
+                            data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                    </button>
+                    <img src="../images/Capture2.PNG" id="logo" alt="HeartLogo" >
+                    <a class="navbar-brand no-margins" id="home_title" href="index.html">
+                        Predictive Analytics
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                        <li><a id="button_action" href="mental_health_index.html">
+                            <span class="glyphicon glyphicon-equalizer">	
+                            </span>
+                            Mental Health Index
+                        </a></li>
+                        <li><a id="button_action" href="health_intake.html">
+                            <span class="glyphicon glyphicon-heart">	
+                            </span>
+                            Health Intake
+                        </a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" id="button_action" data-toggle="dropdown" href="#">Datasets
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="framingham.html">Framingham Study</a></li>
+                                <li><a href="trends.html">Google Trends</a></li>
+                            </ul>
+                            </li>
+                    <li class="dropdown">
+                            <a class="dropdown-toggle" id="button_action" data-toggle="dropdown" href="#">Heart Disease
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="symptoms.html">Symptoms</a></li>
+                                <li><a href="riskfactors.html">Risk Factors</a></li>
+                                <li><a href="prevention.html">Diagnosis</a></li>
+                                <li><a href="treatment.html">Treatment</a></li>
+                                <li><a href="prediction.html">Heart Disease Prediction</a></li>
+                            </ul>
+                            </li>
+                </ul>
+                </div>
+            </div>
+            </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8" id="bodytext">
+                <h1>Mental Health Index</h1>
+                <img src="../images/plotMHI.PNG" alt="mental health index">
+                <p>
+                    Mental health is a growing concern as lockdown measures are being extended world-wide. 
+                    Google Trends enables a near-real-time (NRT) estimate of the mental health index of regional population groups. Relative interest from <a href="https://pubmed.ncbi.nlm.nih.gov/28171770/">Google Trends</a>
+                    data has been shown to have statistically significant correlation to deaths by alcohol, drugs and suicide.  This mental health index 
+                    is an baseline estimate of the number of individuals (12 years of age and older) who are either seeking councilling or admit to suicidal ideation. Baseline data was take from 
+                    <a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310009801">Statistics Canada</a> and modified with an aggregate coefficient calculated by year over year monthly Google search volume.
+                </p>
+                <p id="sub_title">Healthcare Expenditure</p>
+                <img src="../images/plothealth.PNG" alt="healthcare expenditure">
+                <table bordercolor=silver id="coef_table" cellspacing=1 cellpadding=1 width=40% height=100>
+                    <tbody>
+                        <tr>
+                          <td></td>
+                          <td>Coefficient of Determination</td>
+                        </tr>
+                        <tr>
+                          <td>Linear Regression</td>
+                          <td>0.081</td>
+                        </tr>
+                        <tr>
+                            <td>Polynomial Regression</td>
+                            <td>0.146</td>
+                          </tr>
+                    </tbody>
+                </table>
+                <br>
+                <p id="sub_title">Cannabis Expenditure</p>
+                <img src="../images/plotcannabis.PNG" alt="cannabis expenditure">
+                <table bordercolor=silver id="coef_table" cellspacing=1 cellpadding=1 width=40% height=100>
+                    <tbody>
+                        <tr>
+                          <td></td>
+                          <td>Coefficient of Determination</td>
+                        </tr>
+                        <tr>
+                          <td>Linear Regression</td>
+                          <td>-0.116</td>
+                        </tr>
+                        <tr>
+                            <td>Polynomial Regression</td>
+                            <td>0.372</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Methods</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" 
+                            class="navbar-toggle" 
+                            data-toggle="collapse" 
+                            data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                    </button>
+                    <img src="../images/Capture2.PNG" id="logo" alt="HeartLogo" >
+                    <a class="navbar-brand no-margins" id="home_title" href="index.html">
+                        Predictive Analytics
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a id="button_action" href="mental_health_index.html">
+                        <span class="glyphicon glyphicon-equalizer">	
+                        </span>
+                        Mental Health Index
+                    </a></li>
+                    <li><a id="button_action" href="health_intake.html">
+                        <span class="glyphicon glyphicon-heart">	
+                        </span>
+                        Health Intake
+                    </a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" id="button_action" data-toggle="dropdown" href="#">Datasets
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="framingham.html">Framingham Study</a></li>
+                            <li><a href="trends.html">Google Trends</a></li>
+                        </ul>
+                        </li>
+                    <li class="dropdown">
+                            <a class="dropdown-toggle" id="button_action" data-toggle="dropdown" href="#">Heart Disease
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="symptoms.html">Symptoms</a></li>
+                                <li><a href="riskfactors.html">Risk Factors</a></li>
+                                <li><a href="prevention.html">Diagnosis</a></li>
+                                <li><a href="treatment.html">Treatment</a></li>
+                                <li><a href="prediction.html">Heart Disease Prediction</a></li>
+                            </ul>
+                            </li>
+                </ul>
+                </div>
+            </div>
+            </nav>
+        <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-8" id="bodytext">
+            <h2 class="plot-info">Heart Disease Prediction</h1>
+            <p>The prediction of heart disease represents one of the most valuable applications of machine learning in healthcare. The cost to Canadians (both direct and indirect) exceeeded 21 billoin dollards
+                in 2019 and the current crisis only reinforces the need for preventative medicine. By identifying individuals who may be at risk of heart disease, preventative measures or treatment programs can 
+                be implimented to reduce the risk of CHD.<br>
+            </p>
+
+            <p class="plot-info">
+                The model was trained using public data from the Framingham heart study on <a href="https://www.kaggle.com/amanajmera1/framingham-heart-study-dataset">kaggle</a> and processed to omit null values
+                and redundant attributes. From an origonal data set of n=4240 pre-processing the data in this manner led to 15.21% data loss leaving us 
+                with a sample n=3658. This was deemed sufficient for our non-production purposes. Our dataset only contained 15.18% positive for CHD
+                within 10 years so we upsampled our data to ensure a balanced sample set for training purpopses (n=6202).
+                <br>
+                <img src="../images/bar_chart2.png" class="barchart" alt="barchart" >
+                Random forest and decision tree models had the highest accuracy on training data but performed poorly in practical testing. The models underfit the 
+                data and had frequent false negative predictions for CHD. In order to increase our precision we used k-nearest neighbor. Although a less accurate model, 
+                it performed far superior in identifying individuals at risk for CHD.                 
+            </p>             
+        </div>
+    </body>
+
+</html>

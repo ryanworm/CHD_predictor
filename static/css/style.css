@@ -79,6 +79,15 @@ table{
     width:120px;
     height:auto;    
 }
+
+#sub_title{
+    font-weight:bold;
+}
+
+#coef_table{
+    margin-left:50px;
+}
+
 div.row{
     font-family: 'Dosis', sans-serif;
     font-weight:500;

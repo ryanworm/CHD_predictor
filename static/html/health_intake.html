@@ -31,22 +31,27 @@
                     </button>
                     <img src="../images/Capture2.PNG" id="logo" alt="HeartLogo" >
                     <a class="navbar-brand no-margins" id="home_title" href="index.html">
-                      PredictiveAnalytics
+                      Predictive Analytics
                   </a>
               </div>
               <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li><a id="button_action" href="health_intake.html">
-                  <span class="glyphicon glyphicon-plus">	
-                  </span>
-                  Health Intake
-              </a></li>
+                  <li><a id="button_action" href="mental_health_index.html">
+                    <span class="glyphicon glyphicon-equalizer">	
+                    </span>
+                    Mental Health Index
+                  </a></li>
+                  <li><a id="button_action" href="health_intake.html">
+                    <span class="glyphicon glyphicon-heart">	
+                    </span>
+                    Health Intake
+                  </a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" id="button_action" data-toggle="dropdown" href="#">Dataset
+                        <a class="dropdown-toggle" id="button_action" data-toggle="dropdown" href="#">Datasets
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="methods.html">Methods</a></li>
                             <li><a href="framingham.html">Framingham Study</a></li>
+                            <li><a href="trends.html">Google Trends</a></li>
                         </ul>
                         </li>
                     <li class="dropdown">
@@ -58,7 +63,7 @@
                                 <li><a href="riskfactors.html">Risk Factors</a></li>
                                 <li><a href="prevention.html">Diagnosis</a></li>
                                 <li><a href="treatment.html">Treatment</a></li>
-                                <li><a href="https://docs.google.com/presentation/d/1XMjl4_DBYhohckhBWy3K0-iwzy4PjfBEekV9u-lBS2Q/edit?usp=sharing">Powerpoint Presentation</a></li>
+                                <li><a href="prediction.html">Heart Disease Prediction</a></li>
                             </ul>
                             </li>
                 </ul>
@@ -69,11 +74,15 @@
               <div class="row">
                   <div class="col-sm-12 col-md-8" id="bodytext">
             <h1>Health Intake</h1>
+            <p>This health intake form allows you to see your estimated risk level for coronary heart disease over the next ten years.
+              Input information to the best of your knowledge. Labratory test results may be required for some fields, if unknown use normative value (NV).<br>
+            </p>
+            <p id="disclaimer">This is application is designed for educational and training purposes only. This is in no way intended to provide a diagnosis and should not be used as part of any healthcare decision.</p>
             <form action="/request" method="post">
                 <div class="form-group">
                   <label for="FormControlSelect1">Age</label>
                     <input class="form-control" name="age" id="FormControlSelect1" placeholder="Age">
-                    <small class="form-text text-muted">Enter your age in years</small>
+                    <small class="form-text text-muted"></small>
                 </div>
                 <div class="form-group">
                     <label for="Sex">Sex</label>
@@ -85,32 +94,32 @@
                   <div class="form-group">
                     <label for="sysBP">Systomic Blood Pressure</label>
                     <input  class="form-control" name="sysBP" id="FormControlSelect3" placeholder="Systolic Blood Pressure">
-                    <small class="form-text text-muted">Enter your systolic blood pressure (one sig-digit)</small>
+                    <small class="form-text text-muted">Enter your systolic blood pressure (one sig-digit), NV:120</small>
                   </div>
                   <div class="form-group">
                     <label for="totCHO">Total Cholesterol</label>
                     <input  class="form-control" name="totChol" id="FormControlSelect4"  placeholder="Total Cholesterol">
-                    <small  class="form-text text-muted">Enter your total Cholesterol (mg/dL)</small>
+                    <small  class="form-text text-muted">Enter your total Cholesterol (mg/dL), NV:200</small>
                   </div>
                   <div class="form-group">
                     <label for="FormControlSelect5">Blood Glucose</label>
                     <input class="form-control" name="glucose" id="FormControlSelect5" placeholder="Blood Glucose">
-                    <small class="form-text text-muted">Enter your blood glucose level (mg/dL)</small>
+                    <small class="form-text text-muted">Enter your blood glucose level (mg/dL), NV:160</small>
                   </div>
                   <div class="form-group">
                     <label for="FormControlSelect6">Body Mass Index (BMI)</label>
                     <input class="form-control" name="BMI" id="FormControlSelect6" placeholder="BMI">
-                    <small class="form-text text-muted">Enter your BMI ( height (m) / mass<sup>2</sup> (kg) )</small>
+                    <small class="form-text text-muted">Enter your BMI ( height (m) / mass<sup>2</sup> (kg) ), NV:22</small>
                   </div>
                   <div class="form-group">
                     <label for="FormControlSelect7">Heart Rate</label>
                     <input  class="form-control" name="heartRate" id="FormControlSelect7" placeholder="Resting heart rate">
-                    <small class="form-text text-muted">Enter your resting heart rate (beats/min)</small>
+                    <small class="form-text text-muted">Enter your resting heart rate (beats/min), NV:70</small>
                   </div>
                   <div class="form-group">
                     <label for="FormControlSelect8">Smoking</label>
-                    <input class="form-control" name="cigsPerDay" id="FormControlSelect8" placeholder="Cigarettes per day">
-                    <small class="form-text text-muted">How many cigarettes do you smoke in a day?</small>
+                    <input class="form-control" name="cigsPerDay" id="FormControlSelect8" placeholder="How many cigarettes or joints (cannabis) do you smoke in a day?">
+                    <small class="form-text text-muted"></small>
                   </div>
                   <div class="form-group">
                     <label for="FormControlSelect9">Education</label>
