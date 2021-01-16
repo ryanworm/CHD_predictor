@@ -6,3 +6,16 @@ Final project for University of Toronto SCS Data Analytics Boot Camp program.
 *December update: Webpage now includes mental distress indexing project (in development)*
 
 ![index](./static/images/index.png)
+
+## Data sources
+
+## Tools/Packages
+
+## How to use
+* Deployed link: 
+
+## Key findings/Highlights
+![results](./static/images/results.png)
+
+## Takeaways
+
