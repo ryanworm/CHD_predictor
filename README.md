@@ -21,6 +21,10 @@ Final project for University of Toronto SCS Data Analytics Boot Camp program.<br
 
 ## Key findings/Highlights
 ![results](./static/images/results.png)
+<br>
+K-Nearest neighbors was chosed for the decision model as it tested better in pracitcal testing over random forest and decision tree models.
+<br> 
+![f-1 scores](./static/images/bar_chart2.png)
 
-## Takeaways
-
+## Applications
+Healthcare is currently in a state of crisis around the world. By identifying high risk candidates of heart disease in advance we can monitor and implement early intervention strategies to reduce mortality due to heart disease. 
