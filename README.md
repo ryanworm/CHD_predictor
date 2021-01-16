@@ -8,11 +8,11 @@ Final project for University of Toronto SCS Data Analytics Boot Camp program.<br
 ![index](./static/images/index.png)
 
 ## Data sources
-
+* Kaggle: [Framingham heart study data](https://www.kaggle.com/amanajmera1/framingham-heart-study-dataset)
 ## Tools/Packages
 
 ## How to use
-* Deployed link: 
+* Active link: https://predictivehealth.herokuapp.com/ 
 
 ## Key findings/Highlights
 ![results](./static/images/results.png)
